@@ -137,7 +137,7 @@ with tab1:
     if 'new_laws' in st.session_state and st.session_state['new_laws']:
         st.success(f"发现以下 {len(st.session_state['new_laws'])} 条新法规，建议同步：")
         new_df = pd.DataFrame(st.session_state['new_laws'])
-        st.table(new_df[['title', 'publish_date']])
+        st.table(new_df)
     elif 'new_laws' in st.session_state:
         st.info("目前所有法律已是最新。")
 
